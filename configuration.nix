@@ -80,9 +80,11 @@ in
     isNormalUser = true;
     initialPassword = "changeme";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;
     packages = with pkgs; [
       alacritty
+      atuin
+      autotiling
+      blesh
       dunst
       firefox
       grim
