@@ -92,6 +92,7 @@ in
       neovim
       papirus-icon-theme
       pavucontrol
+      plocate
       ripgrep
       rofi-wayland
       swaybg
