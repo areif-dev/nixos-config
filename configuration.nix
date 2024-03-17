@@ -157,6 +157,11 @@ in
   }; 
 
   services.dbus.enable = true;
+
+  services.gnome.gnome-keyring.enable = true;
+
+  services.tailscale.enable = true;
+
   xdg.portal = {
     enable = true;
     wlr.enable = true;
