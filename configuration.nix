@@ -159,6 +159,11 @@ in
 
   services.dbus.enable = true;
 
+  services.locate = {
+    package = pkgs.plocate;
+    enable = true;
+  };
+
   services.gnome.gnome-keyring.enable = true;
 
   services.tailscale.enable = true;
