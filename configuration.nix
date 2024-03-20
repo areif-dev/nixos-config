@@ -162,6 +162,7 @@ in
   services.locate = {
     package = pkgs.plocate;
     enable = true;
+    localuser = null;
   };
 
   services.gnome.gnome-keyring.enable = true;
