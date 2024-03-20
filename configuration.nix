@@ -97,6 +97,7 @@ in
       plocate
       ripgrep
       rofi-wayland
+      starship
       swaybg
       swayidle
       swaylock
