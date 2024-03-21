@@ -91,6 +91,7 @@ in
       keepassxc
       ledger
       libreoffice-still
+      nodejs_21
       neovim
       papirus-icon-theme
       pavucontrol
