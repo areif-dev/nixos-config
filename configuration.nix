@@ -104,6 +104,7 @@ in
       swaybg
       swayidle
       swaylock
+      tldr
       tor-browser
       unzip
       vlc
