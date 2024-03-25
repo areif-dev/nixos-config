@@ -87,6 +87,7 @@ in
       atuin
       autotiling
       blesh
+      cargo
       dunst
       firefox
       grim
@@ -100,6 +101,7 @@ in
       plocate
       ripgrep
       rofi-wayland
+      rustc
       starship
       swaybg
       swayidle
@@ -122,6 +124,7 @@ in
     htop
     killall
     neovim
+    python3
     steam-run
     wget
   ];
