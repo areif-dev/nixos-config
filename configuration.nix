@@ -87,7 +87,6 @@ in
       atuin
       autotiling
       blesh
-      cargo
       dunst
       firefox
       grim
@@ -101,7 +100,7 @@ in
       plocate
       ripgrep
       rofi-wayland
-      rustc
+      rustup
       starship
       swaybg
       swayidle
