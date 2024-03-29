@@ -102,6 +102,7 @@ in
       rofi-wayland
       rustup
       starship
+      steam-run
       swaybg
       swayidle
       swaylock
@@ -124,7 +125,6 @@ in
     killall
     neovim
     python3
-    steam-run
     wget
   ];
 
