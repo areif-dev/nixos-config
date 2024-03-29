@@ -120,9 +120,11 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     bc
+    gcc
     git
     htop
     killall
+    libgcc
     neovim
     python3
     wget
