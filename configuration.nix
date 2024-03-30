@@ -200,6 +200,13 @@ in
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
+  virtualisation = {
+    podman = {
+      enable = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
