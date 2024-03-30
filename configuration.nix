@@ -87,6 +87,8 @@ in
       atuin
       autotiling
       blesh
+      bluez
+      bluez-tools
       dunst
       firefox
       grim
@@ -142,6 +144,8 @@ in
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  hardware.bluetooth.enable = true;
 
   programs.sway = {
     enable = true;
