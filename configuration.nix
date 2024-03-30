@@ -110,11 +110,9 @@ in
       swaylock
       tldr
       tor-browser
-      unzip
       vlc
       waybar
       wlr-randr
-      zip
     ];
   };
 
@@ -129,7 +127,9 @@ in
     libgcc
     neovim
     python3
+    unzip
     wget
+    zip
   ];
 
   fonts.packages = with pkgs; [
@@ -159,6 +159,15 @@ in
     gamescopeSession.enable = true;
   };
 
+  programs.thunar = {
+    enable = true; 
+    plugins = with pkgs.xfce; [
+      thunar-archive-plugin 
+      thunar-volman
+    ];
+  };
+  programs.xfconf.enable = true; 
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
@@ -181,6 +190,9 @@ in
   services.gnome.gnome-keyring.enable = true;
 
   services.tailscale.enable = true;
+
+  services.gvfs.enable = true;  # Enable mounting, trash, etc for Thunar
+  services.tumbler.enable = true;  # Thumbnail support for images 
 
   xdg.portal = {
     enable = true;
