@@ -91,6 +91,7 @@ in
       bluez-tools
       dunst
       firefox
+      freetube
       grim
       keepassxc
       ledger
