@@ -94,6 +94,7 @@ in
       freetube
       grim
       keepassxc
+      krita
       ledger
       libreoffice-still
       nodejs_21
@@ -111,8 +112,10 @@ in
       swaylock
       tldr
       tor-browser
+      viu
       vlc
       waybar
+      wl-clipboard
       wlr-randr
     ];
   };
