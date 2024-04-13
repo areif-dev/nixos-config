@@ -68,7 +68,14 @@ in
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = true;
+
+  # Enable network printer discovery
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true; 
+    openFirewall = true;
+  };
 
   # Enable sound.
   # sound.enable = true;
