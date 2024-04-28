@@ -163,6 +163,8 @@ in
     wrapperFeatures.gtk = true;
   };
 
+  programs.river.enable = true; 
+
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = false;
