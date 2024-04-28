@@ -104,7 +104,7 @@ in
       krita
       ledger
       libreoffice-still
-      nodejs_21
+      nodejs
       neovim
       papirus-icon-theme
       pavucontrol
