@@ -117,6 +117,7 @@ in
       swaybg
       swayidle
       swaylock
+      tidal-hifi
       tldr
       tor-browser
       viu
