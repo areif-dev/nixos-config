@@ -68,7 +68,7 @@
   users.users.aj = {
     isNormalUser = true;
     initialPassword = "changeme";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "libvirtd" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       alacritty
       atuin
@@ -194,6 +194,8 @@
       enable = true;
       defaultNetwork.settings.dns_enabled = true;
     };
+
+    libvirtd.enable = true; 
   };
 
   # Open ports in the firewall.
