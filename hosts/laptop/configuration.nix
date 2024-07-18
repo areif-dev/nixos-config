@@ -4,26 +4,6 @@
 
 { config, lib, pkgs, ... }:
 
-let
-  # bash script to let dbus know about important env variables and
-  # propagate them to relevent services run at the end of sway config
-  # see
-  # https://github.com/emersion/xdg-desktop-portal-wlr/wiki/"It-doesn't-work"-Troubleshooting-Checklist
-  # note: this is pretty much the same as  /etc/sway/config.d/nixos.conf but also restarts  
-  # some user services to make sure they have the correct environment variables
-  dbus-sway-environment = pkgs.writeTextFile {
-    name = "dbus-sway-environment";
-    destination = "/bin/dbus-sway-environment";
-    executable = true;
-
-    text = ''
-      dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-      systemctl --user stop pipewire pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
-      systemctl --user start pipewire pipewire-media-session xdg-desktop-portal xdg-desktop-portal-wlr
-    '';
-  }; 
-
-in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -89,20 +69,18 @@ in
     isNormalUser = true;
     initialPassword = "changeme";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
     packages = with pkgs; [
       alacritty
-      atuin
-      autotiling
-      blesh
       bluez
       bluez-tools
       dunst
       firefox
       freetube
       grim
+      hledger
       keepassxc
       krita
-      ledger
       libreoffice-still
       nodejs
       neovim
@@ -121,7 +99,6 @@ in
       tor-browser
       viu
       vlc
-      waybar
       wl-clipboard
       wlr-randr
     ];
@@ -158,9 +135,13 @@ in
 
   hardware.bluetooth.enable = true;
 
-  programs.sway = {
+  programs.river.enable = true;
+  programs.waybar.enable = true;
+
+  programs.zsh = {
     enable = true;
-    wrapperFeatures.gtk = true;
+    ohMyZsh.enable = true; 
+    autosuggestions.enable = true;
   };
 
   programs.steam = {
@@ -208,7 +189,6 @@ in
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   virtualisation = {
